@@ -1,0 +1,25 @@
+{
+  "name": "tracker-front",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "sst bind astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.4.1",
+    "@astrojs/solid-js": "^4.0.1",
+    "astro": "^4.2.2",
+    "typescript": "^5.3.3",
+    "solid-js": "^1.8.11"
+  },
+  "devDependencies": {
+    "astro-sst": "^2.39.6",
+    "aws-cdk-lib": "2.110.1",
+    "constructs": "10.3.0",
+    "sst": "^2.39.6"
+  }
+}
