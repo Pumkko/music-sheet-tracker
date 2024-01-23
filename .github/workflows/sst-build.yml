@@ -12,6 +12,7 @@ permissions:
 jobs:
   DeployApp:
     runs-on: ubuntu-latest
+    environment: production
     steps:
       - name: Git clone the repository
         uses: actions/checkout@v3
