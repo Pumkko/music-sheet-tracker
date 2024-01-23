@@ -1,9 +1,5 @@
 ---
-if (!process.env.VITE_API_URL) {
-	throw new Error("Wrong Configuration");
-}
-
-const helloWorld = await fetch(process.env.VITE_API_URL)
+const helloWorld = await fetch(import.meta.env.VITE_API_URL)
 	.then((result) => result.json())
 	.then((data) => data.helloWorld);
 ---
