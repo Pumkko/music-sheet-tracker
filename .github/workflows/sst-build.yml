@@ -1,5 +1,8 @@
 name: SST build
-on: push
+on:
+  push:
+    branches:
+      - main
 
 permissions:
   id-token: write # This is required for requesting the JWT
