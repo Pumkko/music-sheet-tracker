@@ -36,7 +36,7 @@ jobs:
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
-              
+
       - name: Deploy app
         run: |
-          npm i && npx sst deploy --stage prod
+          pnpm i && pnpm sst deploy --stage prod
