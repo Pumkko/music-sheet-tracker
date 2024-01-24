@@ -7,11 +7,13 @@
     "typecheck": "tsc -noEmit"
   },
   "devDependencies": {
-    "vitest": "^1.2.1",
     "@types/node": "^20.11.5",
-    "sst": "^2.39.7"
+    "sst": "^2.39.7",
+    "vitest": "^1.2.1"
   },
   "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.496.0",
+    "@aws-sdk/lib-dynamodb": "^3.496.0",
     "zod": "^3.22.4"
   }
 }

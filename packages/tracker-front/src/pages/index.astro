@@ -1,7 +1,16 @@
 ---
-const helloWorld = await fetch(import.meta.env.VITE_API_URL)
-	.then((result) => result.json())
-	.then((data) => data.helloWorld);
+
+import { dynamoDb } from "@music-sheet-tracker/core/dynamoDb";
+import { Table } from "sst/node/table";
+
+const response = await dynamoDb.query({
+	KeyConditionExpression: "musicSheetUniqueName = :musicSheetUniqueName",
+	ExpressionAttributeValues: {
+		":musicSheetUniqueName": "K301",
+	},
+	TableName: Table.SheetMusic.tableName,
+});
+const jsonResponse = JSON.stringify(response.Items);
 ---
 
 <html lang="en">
@@ -14,6 +23,6 @@ const helloWorld = await fetch(import.meta.env.VITE_API_URL)
 	</head>
 	<body>
 		<h1>Astro</h1>
-		<div>{helloWorld}</div>
+		<div>{jsonResponse}</div>
 	</body>
 </html>

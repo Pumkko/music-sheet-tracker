@@ -1,5 +1,5 @@
 {
-  "name": "tracker-front",
+  "name": "@music-sheet-tracker/tracker-front",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
